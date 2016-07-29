@@ -22,10 +22,10 @@
         <div class="box row">
           <div class="email-password-area  col-xs-12" ng-class="[hasProviders ? 'small col-sm-8' : 'large col-sm-12']">
             <div class="header">
-              <span>Log In Binary</span>
+              <span>Log In</span>
               <span ng-show="canRegister" wd-can-register>
                 <span> or </span>
-                <a href="#register">Create an Account Binary</a>
+                <a href="#register">Create an Account</a>
               </span>
 
             </div>
@@ -359,7 +359,12 @@
 
     <div class="container" ng-controller="ErrorCtrl" ng-cloak>
       <div class="logo-container">
-        <img ng-show="logoUrl" class="logo img-responsive" ng-src="{{logoUrl}}"/>
+        <div class="navbar-header">
+          <a class="navbar-brand" style="color: rgb(51, 224, 255);">
+            <img ng-show="logoUrl" class="logo img-responsive ng-hide" ng-src="">
+            <img src="http://nextgen-dev.binaryfountain.com:8080/logo.png" class="img-responsive" alt="binary fountain">
+          </a>
+        </div>
       </div>
       <div ng-show="inError" ng-include="'views/error.html'"></div>
       <div ng-hide="inError" ng-view="">
